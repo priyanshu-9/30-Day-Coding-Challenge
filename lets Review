@@ -1,0 +1,4 @@
+for i in range(int(input())):
+    inp = input()
+    final = "{} {}".format("".join(inp[k] for k in range(len(inp)) if k % 2 == 0), "".join(inp[k] for k in range(len(inp)) if k % 2 != 0))
+    print(final)
