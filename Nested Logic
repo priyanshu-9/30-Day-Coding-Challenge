@@ -1,0 +1,27 @@
+ #include <cmath>  
+ #include <cstdio>  
+ #include <vector>  
+ #include <iostream>  
+ #include <algorithm>  
+ #include <cstring>  
+ using namespace std;  
+ int main() {  
+   /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int n[6];  
+   int len = sizeof(n)/sizeof(*n);  
+   for(int i =0; i<len;i++){  
+     cin>>n[i];  
+   }  
+   int fine = 0;  
+   int yearDif = n[2]-n[5];  
+   int monthDif = n[1]-n[4];  
+   int dayDif = n[0]-n[3];  
+   if (yearDif>0) fine = 10000;  
+   else{  
+     if(monthDif>0&&yearDif==0) fine = 500*monthDif;  
+     else{  
+       if (dayDif>0&&monthDif==0) fine = 15*dayDif;  
+     }  
+   }  
+   cout<<fine;    
+ }  
